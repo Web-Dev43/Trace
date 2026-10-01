@@ -17,12 +17,12 @@ body.light-mode{background:#eef2f7;color:#17202b}body.light-mode #desktop{backgr
 @media(max-width:600px){.run-stage{min-height:245px}.run-stage canvas{min-height:245px}.run-controls{align-items:flex-end}.dpad button{width:48px;height:39px}.run-action{padding:10px 11px}.run-info{flex-direction:column;gap:3px}.run-info i{white-space:normal}}
 
 /* TRACE atmosphere + upgraded controls */
-#desktop{background:linear-gradient(135deg,#b8d9ef 0%,#dff1df 42%,#f7e7bd 100%);transition:background 2.5s ease,filter 2.5s ease}
-#desktop::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 18% 18%,#fff8 0 5%,transparent 22%),radial-gradient(circle at 82% 25%,#fff6 0 4%,transparent 18%);opacity:.9}
-#desktop[data-trace-stage="1"]{background:linear-gradient(135deg,#a9c8dc,#c8d9c7,#e4d9bd)}
-#desktop[data-trace-stage="2"]{background:linear-gradient(135deg,#8799a5,#8e9690,#9c8d86);filter:saturate(.65)}
-#desktop[data-trace-stage="3"]{background:radial-gradient(circle at 50% 45%,#29343b,#11171c 58%,#07090c);filter:saturate(.35)}
-#desktop[data-trace-stage="4"]{background:radial-gradient(circle at 48% 42%,#20272b,#090c10 62%,#030405);filter:contrast(1.08)}
+#desktop{background:#fff2a8;transition:background 2.5s ease,filter 2.5s ease}
+#desktop::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 50%,transparent 0 25%,rgba(255,255,255,.12) 26% 100%);opacity:.9}
+#desktop[data-trace-stage="1"]{background:#c9d9c2}
+#desktop[data-trace-stage="2"]{background:#8f9993;filter:saturate(.7)}
+#desktop[data-trace-stage="3"]{background:#252d31;filter:saturate(.35)}
+#desktop[data-trace-stage="4"]{background:#080a0c;filter:contrast(1.08)}
 #desktop[data-trace-stage="4"]::before{opacity:.18;background:repeating-linear-gradient(0deg,transparent 0 5px,#fff1 6px 7px)}
 .desktop-icon{transition:transform .18s ease,background .18s ease}
 .desktop-icon:active{transform:scale(.94)}
@@ -34,3 +34,4 @@ body.light-mode{background:#eef2f7;color:#17202b}body.light-mode #desktop{backgr
 .trace-run canvas{display:block;width:100%;height:auto;max-height:52vh;border-radius:14px;background:#071018;border:1px solid #3a4655;box-shadow:inset 0 0 35px #0008}
 .run-controls{display:grid;grid-template-columns:repeat(3,minmax(44px,64px));justify-content:center;gap:7px;margin:10px 0 7px}.run-controls .run-dir:first-child{grid-column:2}.run-controls .run-dir:nth-child(2){grid-column:1;grid-row:2}.run-controls .run-dir:nth-child(3){grid-column:2;grid-row:2}.run-controls .run-dir:nth-child(4){grid-column:3;grid-row:2}.run-dir{height:46px;font-size:18px}.run-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.run-primary{background:#31445a}.run-interact{border-color:#61748b}.trace-run>[data-rhint]{display:block;margin-top:9px;color:#aeb8c3;line-height:1.45}
 @media(max-width:600px){.trace-run canvas{max-height:43vh}.run-dir{height:48px}.run-controls{margin:8px 0}.win-btn{min-height:40px;padding:0 12px}}
+\n/* TRACE RUN 2.0 */\n.trace-run{height:100%;display:flex;flex-direction:column;gap:9px}.run-stage{position:relative;flex:1;min-height:260px;border:1px solid #34404c;border-radius:14px;overflow:hidden;background:#080c10;box-shadow:inset 0 0 45px #0009,0 12px 35px #0005}.run-stage canvas{display:block;width:100%;height:100%;min-height:260px;object-fit:contain;touch-action:none}.run-vignette,.run-scan{position:absolute;inset:0;pointer-events:none}.run-vignette{background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.48))}.run-scan{opacity:.06;background:repeating-linear-gradient(0deg,transparent 0 5px,#fff 6px 7px)}.run-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.run-info{display:flex;justify-content:space-between;gap:12px;min-height:34px;font-size:12px;color:#aeb9c5}.run-info i{font-style:normal;color:#667382;font-size:9px;letter-spacing:.5px;white-space:nowrap}.run-primary{background:#31445a}.run-interact{border-color:#61748b}@media(max-width:600px){.run-stage{min-height:245px}.run-stage canvas{min-height:245px}.run-info{flex-direction:column;gap:3px}.run-info i{white-space:normal}}\n
