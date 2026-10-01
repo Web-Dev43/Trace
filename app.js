@@ -39,7 +39,9 @@ if(!running)return;
 let count=[fragmentA,fragmentB,fragmentC].filter(Boolean).length;
 if(area===0&&near("panel")){if(!power){power=true;glitch=70;say("POWER ROUTE RESTORED. Two service routes are now visible.");}else say("POWER IS STABLE.");return}
 if(area===0&&near("console")){if(power){say(localStorage.getItem("trace_case_seen")==="1"?"CONSOLE: CASE TRACE-143207 DETECTED.":"CONSOLE: SESSION 02 // RECOVERY REQUIRED.");stage=Math.max(stage,1);glitch=90;}else say("CONSOLE: POWER REQUIRED.");return}
-if(area===0&&near("archiveDoor")){if(power){area=1;px=70;py=390;glitch=80;}else say("ARCHIVE ROUTE: POWER REQUIRED.");return}\nif(area===0&&near("serviceDoor")){if(power){area=2;px=70;py=390;glitch=80;}else say("SERVICE ROUTE: POWER REQUIRED.");return}\nif(area===0&&near("door")){if(count>=3){door=true;area=3;px=70;py=390;say("CONTROL ROUTE UNLOCKED. The map has changed.");glitch=120;}else say("LOCKED. "+(3-count)+" system fragment"+(3-count===1?" is":"s are")+" still missing.");return}
+if(area===0&&near("archiveDoor")){if(power){area=1;px=70;py=390;glitch=80;}else say("ARCHIVE ROUTE: POWER REQUIRED.");return}
+if(area===0&&near("serviceDoor")){if(power){area=2;px=70;py=390;glitch=80;}else say("SERVICE ROUTE: POWER REQUIRED.");return}
+if(area===0&&near("door")){if(count>=3){door=true;area=3;px=70;py=390;say("CONTROL ROUTE UNLOCKED. The map has changed.");glitch=120;}else say("LOCKED. "+(3-count)+" system fragment"+(3-count===1?" is":"s are")+" still missing.");return}
 if(area===1&&near("terminal")){say(localStorage.getItem("trace_incident_seen")==="1"?"ARCHIVE: TRACE-143207 appears in deleted records.":"ARCHIVE: one record was deleted at 14:32:07.");glitch=55;return}
 if(area===1&&near("fragment")&&!fragmentA){fragmentA=true;stage=Math.max(stage,2);code=localStorage.getItem("trace_case_seen")==="1"||localStorage.getItem("trace_incident_seen")==="1"?"1432":"";say("FRAGMENT 01 RECOVERED. Four digits were attached to the record.");glitch=80;return}
 if(area===1&&near("back")){area=0;px=110;py=400;return}
