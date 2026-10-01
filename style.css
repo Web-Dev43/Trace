@@ -53,3 +53,21 @@ body.light-mode{background:#eef2f7;color:#17202b}body.light-mode #desktop{backgr
   .run-info{min-height:0!important;font-size:10px!important;line-height:1.2;}
   .run-info i{font-size:8px!important;}
 }
+
+/* FINAL PORTRAIT TRACE RUN LOCK */
+@media(max-width:600px) and (orientation:portrait){
+.trace-run-window{top:7px!important;left:7px!important;transform:none!important;width:calc(100vw - 14px)!important;height:calc(100dvh - 68px)!important;max-height:calc(100dvh - 68px)!important;min-height:0!important;overflow:hidden!important;}
+.trace-run-window .win-body{height:calc(100% - 46px)!important;max-height:calc(100% - 46px)!important;overflow:hidden!important;padding:5px!important;}
+.trace-run-window .trace-run{height:100%!important;max-height:100%!important;gap:3px!important;overflow:hidden!important;}
+.trace-run-window .trace-run>div:nth-child(2){height:290px!important;flex:0 0 290px!important;width:280px!important;gap:5px!important;overflow:hidden!important;}
+.trace-run-window .trace-run>div:nth-child(2)>div:first-child{width:145px!important;flex:0 0 145px!important;height:290px!important;}
+.trace-run-window .trace-run>div:nth-child(2)>div:first-child canvas{width:145px!important;height:290px!important;max-height:none!important;}
+.trace-run-window .trace-run>div:nth-child(2)>div:nth-child(2){width:130px!important;min-width:130px!important;height:290px!important;}
+.trace-run-window .trace-run>div:nth-child(2)>div:nth-child(2)>div{padding:4px!important;margin-bottom:3px!important;}
+.trace-run-window .trace-run>div:nth-child(2)>div:nth-child(2) [data-next]{height:50px!important;margin-top:0!important;}
+.trace-run-window .trace-run>div:nth-child(2)>div:nth-child(2) .win-btn{min-height:28px!important;height:28px!important;}
+.trace-run-window .trace-run>[style*="grid-template-columns"]{margin-top:1px!important;max-width:220px!important;gap:3px!important;}
+.trace-run-window .trace-run>[style*="grid-template-columns"] .win-btn{min-height:30px!important;height:30px!important;}
+.trace-run-window .run-info{font-size:9px!important;line-height:1.05!important;min-height:0!important;height:20px!important;overflow:hidden!important;}
+.trace-run-window .run-info i{font-size:7px!important;}
+}
