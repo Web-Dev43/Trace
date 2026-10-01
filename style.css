@@ -9,12 +9,13 @@
   .desktop-icon b{font-size:11px}
   .window{left:50%;top:calc(50% - 27px);transform:translate(-50%,-50%);width:calc(100vw - 14px);height:calc(100dvh - 70px);min-height:280px;border-radius:10px}
   .window.maximized{left:7px;top:7px;width:calc(100vw - 14px);height:calc(100dvh - 68px)}
-  .titlebar{height:46px;padding:0 8px;gap:5px}
+  .titlebar{position:relative;height:46px;padding:0 8px;padding-right:52px;gap:5px}
   .titlebar b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .win-btn{width:38px;height:36px;font-size:18px}
-  .win-btn.close{width:44px;height:38px;font-size:25px}
+  .titlebar .max{display:none}
+  .titlebar .close{position:absolute;right:4px;top:4px;width:42px;height:38px;display:flex;align-items:center;justify-content:center;font-size:25px;line-height:1;z-index:2}
   .win-body{height:calc(100% - 46px);padding:12px;padding-bottom:64px}
-  .mobile-exit{right:10px;bottom:10px;padding:10px 15px;font-size:13px}
+  .mobile-exit{display:none}
   .calc{max-width:100%}
   .calc-display{height:62px;font-size:24px}
   .calc-grid{gap:6px}
