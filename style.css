@@ -18,11 +18,11 @@ body.light-mode{background:#eef2f7;color:#17202b}body.light-mode #desktop{backgr
 
 /* TRACE atmosphere + upgraded controls */
 #desktop{background:#fff2a8;transition:background 2.5s ease,filter 2.5s ease}
-#desktop::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 50%,transparent 0 25%,rgba(255,255,255,.12) 26% 100%);opacity:.9}
-#desktop[data-trace-stage="1"]{background:#c9d9c2}
-#desktop[data-trace-stage="2"]{background:#8f9993;filter:saturate(.7)}
-#desktop[data-trace-stage="3"]{background:#252d31;filter:saturate(.35)}
-#desktop[data-trace-stage="4"]{background:#080a0c;filter:contrast(1.08)}
+#desktop::before{content:"☺";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;font-family:Arial,sans-serif;font-size:min(46vw,330px);font-weight:400;color:#5b5120;text-shadow:0 5px 0 rgba(255,255,255,.12);opacity:.9;transition:opacity 2.5s ease,filter 2.5s ease}
+#desktop[data-trace-stage="1"]{background:#c9d9c2}#desktop[data-trace-stage="1"]::before{opacity:.28}
+#desktop[data-trace-stage="2"]{background:#8f9993;filter:saturate(.7)}#desktop[data-trace-stage="2"]::before{opacity:.10;filter:grayscale(1)}
+#desktop[data-trace-stage="3"]{background:#252d31;filter:saturate(.35)}#desktop[data-trace-stage="3"]::before{opacity:.035;filter:grayscale(1)}
+#desktop[data-trace-stage="4"]{background:#080a0c;filter:contrast(1.08)}#desktop[data-trace-stage="4"]::before{opacity:.012;filter:grayscale(1)}
 #desktop[data-trace-stage="4"]::before{opacity:.18;background:repeating-linear-gradient(0deg,transparent 0 5px,#fff1 6px 7px)}
 .desktop-icon{transition:transform .18s ease,background .18s ease}
 .desktop-icon:active{transform:scale(.94)}
