@@ -8,6 +8,7 @@ window.TRACE_STORY_PROJECT={
     {id:"maya_reference",trigger:"time",minutes:2,app:"Browser",requires:"unease_01",phase:1,notification:"A local record mentions Maya Reyes.",clue:"The name Maya Reyes is linked to TRACE-143207.",flag:"mayaReference",flagValue:"true"},
     {id:"record_mismatch",trigger:"time",minutes:3,app:"Files",requires:"maya_reference",phase:1,notification:"Session record mismatch detected.",clue:"Two sibling records do not agree.",flag:"recordMismatch",flagValue:"true"},
     {id:"run_archive",trigger:"time",minutes:4,app:"TRACE: RUN",requires:"record_mismatch",phase:1,notification:"TRACE: RUN accessed archived session data.",clue:"The game is reading data it should not have.",flag:"runArchive",flagValue:"true"},
-    {id:"maya_contact",trigger:"time",minutes:6,app:"Maya",requires:"run_archive",phase:2,notification:"Incoming local session.",clue:"A second consciousness signature is active.",flag:"mayaUnlocked",flagValue:"true"}
+    {id:"maya_contact",trigger:"time",minutes:6,app:"Maya",requires:"run_archive",phase:2,notification:"Incoming local session.",clue:"A second consciousness signature is active.",flag:"mayaUnlocked",flagValue:"true"},
+    {id:"session_conflict",trigger:"time",minutes:6.5,app:"System",requires:"maya_contact",phase:2,notification:"Session integrity changed.",clue:"Two records are active.",flag:"sessionConflict",flagValue:"true"}
   ]
 };
